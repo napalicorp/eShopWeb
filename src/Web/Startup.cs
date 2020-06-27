@@ -40,6 +40,7 @@ namespace Microsoft.eShopWeb.Web
         private void ConfigureInMemoryDatabases(IServiceCollection services)
         {
             // use in-memory database
+            var secret = "24kl2g43llh2k444345l23hjk4l4k44m4nb4b4vb";
             services.AddDbContext<CatalogContext>(c =>
                 c.UseInMemoryDatabase("Catalog"));
 
