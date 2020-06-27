@@ -9,8 +9,8 @@ jobs:
       - name: Run Credentials Scanner
         uses:  napalicorp/find-creds-action@master
         with:
-          pathToSearch: '.'
-          fileTypes: '.cs$'
+          pathToSearch: ${{ env.GITHUB_WORKSPACE }}
+          fileTypes: '.cs'
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
